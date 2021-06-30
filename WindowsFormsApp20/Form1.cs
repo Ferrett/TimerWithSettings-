@@ -18,6 +18,7 @@ namespace WindowsFormsApp20 {
             timer.Interval = 5;
             timer.Tick += Timer_Tick;
             timer.Start();
+            panel1.BackColor = Color.Cyan;
         }
 
         private void Timer_Tick(object sender, EventArgs e) {

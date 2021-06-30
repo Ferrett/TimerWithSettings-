@@ -24,34 +24,46 @@
         /// </summary>
         private void InitializeComponent() {
             this.labelTime = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelTime
             // 
             this.labelTime.AutoSize = true;
             this.labelTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTime.Location = new System.Drawing.Point(191, 155);
+            this.labelTime.Location = new System.Drawing.Point(84, 79);
             this.labelTime.Name = "labelTime";
             this.labelTime.Size = new System.Drawing.Size(258, 108);
             this.labelTime.TabIndex = 0;
             this.labelTime.Text = "Time";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.labelTime);
+            this.panel1.Location = new System.Drawing.Point(177, 70);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(456, 269);
+            this.panel1.TabIndex = 1;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.labelTime);
+            this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Label labelTime;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
