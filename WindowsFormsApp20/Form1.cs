@@ -14,15 +14,32 @@ namespace WindowsFormsApp20 {
     
     public partial class Form1 : Form {
         private Timer timer = new Timer();
-        
+        private bool showHours = false;
+        private bool showMinutes = true;
+        private bool showSeconds = true;
+        private bool showMiliseconds = false;
         public Form1() {
             InitializeComponent();
 
-            timer.Interval = 5;
+            timer.Interval = 1;
             timer.Tick += Timer_Tick;
             timer.Start();
             panel1.BackColor = Color.Cyan;
             button1.Click += Button1_Click;
+            
+        }
+
+        public void ShowHours() {
+            showHours = !showHours;
+        }
+        public void ShowMinutes() {
+            showMinutes = !showMinutes;
+        }
+        public void ShowSeconds() {
+            showSeconds = !showSeconds;
+        }
+        public void ShowMiliseconds() {
+            showMiliseconds = !showMiliseconds;
         }
 
         public void ChangeFontColor() {
@@ -55,7 +72,10 @@ namespace WindowsFormsApp20 {
         }
 
         private void Timer_Tick(object sender, EventArgs e) {
-            labelTime.Text =$"{DateTime.Now.Hour.ToString()}:{DateTime.Now.Minute.ToString()}";
+
+            labelTime.Text = $"{(showHours ? DateTime.Now.Hour.ToString() : "")}{(showMinutes ? " " + DateTime.Now.Hour.ToString() : "")}" +
+                $"{(showSeconds ? " " + DateTime.Now.Second.ToString() : "")} {(showMiliseconds ? " " + DateTime.Now.Millisecond.ToString() : "")}";
         }
+
     }
 }

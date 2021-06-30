@@ -17,7 +17,31 @@ namespace WindowsFormsApp20 {
             form1 = f;
             changeFormColorButton.Click += ChangeFormColorButton_Click;
             changePanelColorButton.Click += ChangePanelColorButton_Click;
-            changeFontColorButton.Click += ChangeFontColorButton_Click; ;
+            changeFontColorButton.Click += ChangeFontColorButton_Click;
+
+            hoursCheckBox.Click += HoursCheckBox_Click;
+            minutesCheckBox.Click += MinutesCheckBox_Click;
+            secondsCheckBox.Click += SecondsCheckBox_Click;
+            milisecondsCheckBox.Click += MilisecondsCheckBox_Click;
+
+            minutesCheckBox.Checked = true;
+            secondsCheckBox.Checked = true;
+        }
+
+        private void HoursCheckBox_Click(object sender, EventArgs e) {
+            form1.ShowHours();
+        }
+
+        private void MinutesCheckBox_Click(object sender, EventArgs e) {
+            form1.ShowMinutes();
+        }
+
+        private void MilisecondsCheckBox_Click(object sender, EventArgs e) {
+            form1.ShowMiliseconds();
+        }
+
+        private void SecondsCheckBox_Click(object sender, EventArgs e) {
+            form1.ShowSeconds();
         }
 
         private void ChangeFontColorButton_Click(object sender, EventArgs e) {
